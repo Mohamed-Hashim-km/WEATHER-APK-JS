@@ -11,10 +11,13 @@ async function checkweather(city){
     if(response.status == 404){
            document.querySelector(".error").style.display="block"
            document.querySelector(".wether").style.display="none"
+           bodys.style.background="#86ecf7"
+
     }
     else if(searchbox.value.trim()===""){
         document.querySelector(".error").style.display="block"
-        document.querySelector(".wether").style.display="none" 
+        document.querySelector(".wether").style.display="none"
+        bodys.style.background="#86ecf7" 
     }
     else{
         var data=await response.json();
